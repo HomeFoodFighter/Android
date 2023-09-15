@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="31sp"
+            android:layout_height="32sp"
+            android:src="@drawable/icon_back"
+            android:layout_marginStart="25sp"
+            android:layout_marginTop="13sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="135sp"
+        android:layout_height="139sp"
+        android:src="@drawable/icon_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="120sp"
+        android:layout_marginEnd="120sp"
+        android:layout_marginTop="119sp"/>
+
+    <EditText
+        android:id="@+id/edt_id"
+        android:layout_width="0sp"
+        android:layout_height="44sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        android:hint="아디이를 입력해주세요"
+        android:textSize="15sp"
+        android:inputType="textAutoCorrect"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginTop="33sp"
+        android:padding="10sp"
+        android:paddingStart="20sp"
+        android:background="@drawable/style_edt_bg"
+        android:elevation="5sp"/>
+
+    <EditText
+        android:id="@+id/edt_pw"
+        android:layout_width="0sp"
+        android:layout_height="44sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_id"
+        android:hint="비민번호를 입력해주세요"
+        android:textSize="15sp"
+        android:inputType="textPassword"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginTop="22sp"
+        android:padding="10sp"
+        android:paddingStart="20sp"
+        android:background="@drawable/style_edt_bg"
+        android:elevation="5sp"/>
+
+    <TextView
+        android:id="@+id/txt_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColor="@color/grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pw"
+        android:layout_marginStart="91sp"
+        android:layout_marginTop="29sp"/>
+
+    <TextView
+        android:id="@+id/txt_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textColor="@color/grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pw"
+        android:layout_marginTop="29sp"
+        android:layout_marginStart="12sp"/>
+
+    <TextView
+        android:id="@+id/txt_find_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디/비밀번호 찾기"
+        android:textColor="@color/grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_bar"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pw"
+        android:layout_marginTop="29sp"
+        android:layout_marginStart="10sp"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0sp"
+        android:layout_height="44sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sign_up"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:background="@drawable/style_btn_bg"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="13sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

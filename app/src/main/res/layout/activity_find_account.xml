@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindAccountActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="31sp"
+            android:layout_height="32sp"
+            android:src="@drawable/icon_back"
+            android:layout_marginStart="2sp"
+            android:layout_marginTop="13sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txt_find_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="198dp"
+        android:text="아이디/비밀번호 찾기"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_find_account"
+        android:layout_marginStart="24sp"
+        android:layout_marginTop="86sp"
+        android:text="이메일"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_email"
+        android:hint="email@naver.com"
+        android:textSize="12sp"
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginTop="6sp"
+        android:padding="10sp"
+        android:paddingStart="20sp"
+        android:background="@drawable/style_edt_bg"
+        android:elevation="5sp">
+    </EditText>
+
+    <TextView
+        android:id="@+id/txt_email_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="등록되지 않은 메일주소입니다. 다시 확인해주세요."
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email"
+        android:layout_marginStart="45sp"
+        android:layout_marginTop="6sp"
+        android:layout_marginEnd="11sp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_send_email"
+        android:layout_width="0sp"
+        android:layout_height="44sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginBottom="21sp"
+        android:background="@drawable/style_btn_bg"
+        android:text="안내 메일 보내기"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="13sp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

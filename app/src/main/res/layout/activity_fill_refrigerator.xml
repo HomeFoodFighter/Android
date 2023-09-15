@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FillRefrigeratorActivity">
+
+    <LinearLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/home_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="31sp"
+                android:layout_height="32sp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/icon_logo" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_my"
+                android:layout_marginEnd="24dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5sp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_back" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/text_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="냉장고 채우기" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="31sp"
+                android:layout_height="31sp"
+                android:src="@drawable/icon_delete"
+                android:background="@null"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rec_top"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:gravity="center"
+        android:layout_marginTop="19dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_top_1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_top_2"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_top_3"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_top_4"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_top_5"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_top_6"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rec_mid"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_mid"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rectangle_bottom"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="545dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec_top"
+        android:layout_marginTop="24sp"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:background="@drawable/style_refrigerator_box"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/veg_fruit"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="채소/과일"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/icon_plus_circle"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:background="@drawable/style_refrigerator_box_line"/>
+
+        <TextView
+            android:id="@+id/grains"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="쌀/면/잡곡/견과류"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/icon_plus_circle"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:background="@drawable/style_refrigerator_box_line"/>
+
+        <TextView
+            android:id="@+id/meat_seafood"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="정육/계란/수산/해산/건어물 "
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/icon_plus_circle"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:background="@drawable/style_refrigerator_box_line"/>
+
+        <TextView
+            android:id="@+id/sauce"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="양념/오일"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/icon_plus_circle"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:background="@drawable/style_refrigerator_box_line"/>
+
+        <TextView
+            android:id="@+id/others"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="가공/유제품/기타"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/icon_plus_circle"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:background="@drawable/style_refrigerator_box_line"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_view_recipe"
+        android:layout_width="0sp"
+        android:layout_height="44sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="100sp"
+        android:layout_marginEnd="100sp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/style_unable_btn_bg"
+        android:text="요리보기"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="13sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
