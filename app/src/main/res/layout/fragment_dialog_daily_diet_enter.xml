@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DialogDailyDietEnterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:background="@drawable/style_dialog_enter_food">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_liked_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/nothing"
+                android:minHeight="0dp"
+                android:textSize="15sp"
+                android:text="찜한 레시피에서 선택"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_self_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/nothing"
+                android:minHeight="0dp"
+                android:textSize="15sp"
+                android:text="직접 입력하기"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="15sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

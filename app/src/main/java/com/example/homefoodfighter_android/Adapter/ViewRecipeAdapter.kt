@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homefoodfighter_android.Data.ViewRecipeData
-import com.example.homefoodfighter_android.databinding.CardLayoutViewRecipeBinding
+import com.example.homefoodfighter_android.databinding.ItemViewRecipeBinding
 
 
 class ViewRecipeAdapter: RecyclerView.Adapter<ViewRecipeAdapter.MyViewHolder>() {
 
     var datalist = mutableListOf<ViewRecipeData>()//리사이클러뷰에서 사용할 데이터 미리 정의 -> 나중에 MainActivity등에서 datalist에 실제 데이터 추가
 
-    inner class MyViewHolder(private val binding: CardLayoutViewRecipeBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class MyViewHolder(private val binding: ItemViewRecipeBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(recipeData:ViewRecipeData){
             //binding.dogPhotoImg.=dogData.dog_img
@@ -28,7 +28,7 @@ class ViewRecipeAdapter: RecyclerView.Adapter<ViewRecipeAdapter.MyViewHolder>() 
 
     //만들어진 뷰홀더 없을때 뷰홀더(레이아웃) 생성하는 함수
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding=CardLayoutViewRecipeBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding=ItemViewRecipeBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return MyViewHolder(binding)
     }
 

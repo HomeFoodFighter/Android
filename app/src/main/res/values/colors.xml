@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="nothing">#00000000</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,7 +9,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="main_yellow">#D48329</color>
     <color name="main_green">#A5CE55</color>
     <color name="sub_green">#C8E293</color>
@@ -16,4 +17,8 @@
     <color name="status_bar_color">#00FFFFFF</color>
     <color name="login_status_bar_color">#00FFFFFF</color>
     <color name="red">#FB0606</color>
+
+    <color name="selected_tab_text_color">#000</color>
+    <color name="unselected_tab_text_color">#C5C5C5</color>
 </resources>
+
