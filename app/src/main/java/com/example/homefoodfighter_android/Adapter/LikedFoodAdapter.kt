@@ -3,32 +3,34 @@ package com.example.homefoodfighter_android.Adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homefoodfighter_android.Data.LikedFoodData
 import com.example.homefoodfighter_android.Data.ViewRecipeData
+import com.example.homefoodfighter_android.databinding.ItemLikedFoodBinding
 import com.example.homefoodfighter_android.databinding.ItemViewRecipeBinding
 
 
-class ViewRecipeAdapter: RecyclerView.Adapter<ViewRecipeAdapter.MyViewHolder>() {
+class LikedFoodAdapter: RecyclerView.Adapter<LikedFoodAdapter.MyViewHolder>() {
 
-    var datalist = mutableListOf<ViewRecipeData>()//리사이클러뷰에서 사용할 데이터 미리 정의 -> 나중에 MainActivity등에서 datalist에 실제 데이터 추가
+    var datalist = mutableListOf<LikedFoodData>()//리사이클러뷰에서 사용할 데이터 미리 정의 -> 나중에 MainActivity등에서 datalist에 실제 데이터 추가
 
-    inner class MyViewHolder(private val binding: ItemViewRecipeBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class MyViewHolder(private val binding: ItemLikedFoodBinding): RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(recipeData:ViewRecipeData){
+        fun bind(likedFoodData: LikedFoodData){
             //binding.dogPhotoImg.=dogData.dog_img
-            binding.textRecipeName.text= recipeData.recipe_name
-            binding.textRecipeContent.text= recipeData.recipe_content
+            binding.textRecipeName.text= likedFoodData.recipe_name
+            binding.textRecipeContent.text= likedFoodData.recipe_content
             //binding.imgProfile = recipeData.recipe_image
             //binding.imgRecipe = recipeData.recipe_image
-            binding.textWriter.text = recipeData.recipe_writer
-            binding.textRate.text = recipeData.recipe_rate.toString()
-            binding.textReviewNum.text = recipeData.review_num.toString()
+            binding.textWriter.text = likedFoodData.recipe_writer
+            binding.textRate.text = likedFoodData.recipe_rate.toString()
+            binding.textReviewNum.text = likedFoodData.review_num.toString()
         }
     }
 
 
     //만들어진 뷰홀더 없을때 뷰홀더(레이아웃) 생성하는 함수
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding=ItemViewRecipeBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding= ItemLikedFoodBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return MyViewHolder(binding)
     }
 

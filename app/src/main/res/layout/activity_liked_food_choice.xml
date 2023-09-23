@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewRecipeActivity">
+    tools:context=".LikedFoodChoiceActivity">
 
     <LinearLayout
         android:id="@+id/app_bar"
@@ -41,37 +41,29 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:paddingHorizontal="25sp"
-            android:paddingVertical="5sp"
-            android:gravity="center_vertical">
-
+            android:layout_height="55sp">
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/img_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_back" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:src="@drawable/icon_back"
+                android:layout_marginStart="25sp"/>
+
             <TextView
-                android:id="@+id/text_toolbar"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:text="요리보기" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:text="찜한 레시피에서 선택하기"
+                android:layout_gravity="center"/>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.Toolbar>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -84,8 +76,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="11sp"
         android:layout_marginEnd="11sp"
-        android:layout_marginBottom="11sp"
+        android:layout_marginBottom="70sp"
         android:layout_marginTop="18sp"/>
 
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0sp"
+        android:layout_height="44sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/style_unable_btn_bg"
+        android:text="저장하기"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="13sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

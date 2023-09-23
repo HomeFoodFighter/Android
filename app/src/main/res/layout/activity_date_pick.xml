@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewRecipeActivity">
+    tools:context=".DatePickActivity">
 
     <LinearLayout
         android:id="@+id/app_bar"
@@ -41,51 +41,42 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:paddingHorizontal="25sp"
-            android:paddingVertical="5sp"
-            android:gravity="center_vertical">
-
+            android:layout_height="55sp">
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/img_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_back" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:src="@drawable/icon_back"
+                android:layout_marginStart="25sp"/>
+
             <TextView
-                android:id="@+id/text_toolbar"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:text="요리보기" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:text="찜한 레시피에서 선택하기"
+                android:layout_gravity="center"/>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.Toolbar>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0sp"
-        android:layout_height="0sp"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="11sp"
-        android:layout_marginEnd="11sp"
-        android:layout_marginBottom="11sp"
-        android:layout_marginTop="18sp"/>
+        android:datePickerMode="calendar"
+        android:headerBackground="@color/main_green" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,23 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="MyWeekDayTextAppearance">
+        <!-- 요일 텍스트의 색상을 변경 -->
+        <item name="android:textColor">@color/black</item>
+        <!-- 요일 텍스트의 글꼴 크기 변경 -->
+        <item name="android:textSize">20sp</item>
+        <!-- 요일 텍스트를 굵게 -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:headerMonthTextAppearance">@style/MyWeekDayTextAppearance</item> <!-- 요일 텍스트 스타일 지정 -->
+        <item name="android:windowMinWidthMajor">380dp</item> <!-- 너비 조절 -->
+        <item name="android:windowMinWidthMinor">380dp</item> <!-- 너비 조절 -->
+        <item name="android:textColorPrimary">@color/grey</item>
+    </style>
+
+
+
 </resources>
