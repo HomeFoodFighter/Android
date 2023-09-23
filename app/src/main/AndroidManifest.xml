@@ -24,6 +24,15 @@
             android:name=".DatePickActivity"
             android:exported="false" />
         <activity
+            android:name=".MyreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MyrecipeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BookmarkActivity"
+            android:exported="true" />
+        <activity
             android:name=".PasswordActivity"
             android:exported="false" />
         <activity
