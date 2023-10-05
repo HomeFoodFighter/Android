@@ -25,9 +25,17 @@ class RealTimeRecipeActivity : AppCompatActivity() {
     fun initRealTimeRecyclerView(){
         val adapter=RealTimeAdapter() //어댑터 객체 만듦
         adapter.datalist=mDatas //데이터 넣어줌
-        viewBinding.recyclerView.adapter=adapter //리사이클러뷰에 어댑터 연결
-        viewBinding.recyclerView.layoutManager= GridLayoutManager(this,2) //레이아웃 매니저 연결
+        //viewBinding.recyclerView.adapter=adapter //리사이클러뷰에 어댑터 연결
+        //viewBinding.recyclerView.layoutManager= GridLayoutManager(this,2) //레이아웃 매니저 연결
+
+        viewBinding.recyclerView.adapter = adapter
+        viewBinding.recyclerView.run {
+            val spanCount = 2
+            val space = 20
+            addItemDecoration(GridSpaceItemDecoration(spanCount, space))
+        }
     }
+
 
     fun initializelist(){ //임의로 데이터 넣어서 만들어봄
         with(mDatas){

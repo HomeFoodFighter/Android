@@ -12,13 +12,13 @@
         android:theme="@style/Theme.HomeFoodFighterAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".RealTimeRecipeActivity"
-            android:exported="false" />
-        <activity
             android:name=".LikedFoodChoiceActivity"
             android:exported="false" />
         <activity
-            android:name=".DailyDietActivity"
+            android:name=".ViewRecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".DatePickActivity"
@@ -69,10 +69,10 @@
             android:name=".VegetablesFruitActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".RealTimeRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewRecipeActivity"
+            android:name=".DailyDietActivity"
             android:exported="false" />
         <activity
             android:name=".FindAccountActivity"
