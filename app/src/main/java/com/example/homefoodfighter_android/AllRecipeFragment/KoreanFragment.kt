@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.homefoodfighter_android.Adapter.AllRecipeRecycleAdapter
 import com.example.homefoodfighter_android.Data.AllRecipeData
+import com.example.homefoodfighter_android.GridSpaceItemDecoration
 import com.example.homefoodfighter_android.databinding.FragmentKoreanBinding
 
 class KoreanFragment : Fragment() {
@@ -32,9 +33,16 @@ class KoreanFragment : Fragment() {
     fun initAllRecipeRecyclerView(){
         val adapter=AllRecipeRecycleAdapter() //어댑터 객체 만듦
         adapter.datalist=mDatas //데이터 넣어줌
-        viewBinding.recyclerView.adapter=adapter //리사이클러뷰에 어댑터 연결
-        viewBinding.recyclerView.layoutManager= GridLayoutManager(requireContext(),2) //레이아웃 매니저 연결
+        //viewBinding.recyclerView.adapter=adapter //리사이클러뷰에 어댑터 연결
+        //viewBinding.recyclerView.layoutManager= GridLayoutManager(requireContext(),2) //레이아웃 매니저 연결
         // RecyclerView의 아이템 높이를 wrap_content로 유지
+
+        viewBinding.recyclerView.adapter = adapter
+        viewBinding.recyclerView.run {
+            val spanCount = 2
+            val space = 20
+            addItemDecoration(GridSpaceItemDecoration(spanCount, space))
+        }
 
     }
 

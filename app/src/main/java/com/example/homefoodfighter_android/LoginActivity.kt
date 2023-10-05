@@ -16,6 +16,7 @@ class LoginActivity : AppCompatActivity() {
 
         viewDrawable()
         btnClick()
+
     }
 
     fun viewDrawable(){
@@ -25,9 +26,10 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
     fun btnClick(){
-        viewBinding.txtSignUp.setOnClickListener {
-            startActivity(Intent(this,SignUpActivity::class.java))
-        }
+        viewBinding.txtSignUp.setOnClickListener { startActivity(Intent(this,SignUpActivity::class.java)) }
+        viewBinding.txtFindAccount.setOnClickListener { startActivity(Intent(this, FindAccountActivity::class.java)) }
+        viewBinding.btnLogin.setOnClickListener { startActivity(Intent(this,MainActivity::class.java)) }
     }
 }
