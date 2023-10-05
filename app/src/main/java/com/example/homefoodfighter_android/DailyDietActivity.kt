@@ -35,10 +35,6 @@ class DailyDietActivity : AppCompatActivity() {
    }
 
     fun dialogClick(){
-        // 클릭 이벤트 핸들링
-        viewBinding.textMonBreakfast.setOnClickListener { v ->
-
-        }
 
     }
 }

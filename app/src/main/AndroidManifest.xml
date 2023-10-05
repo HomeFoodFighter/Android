@@ -25,6 +25,7 @@
         <activity
             android:name=".RealTimeRecipeActivity"
             android:exported="false" />
+
         <activity
             android:name=".ViewRecipeActivity"
             android:exported="false" />
@@ -78,9 +79,6 @@
             android:exported="false" />
         <activity
             android:name=".VegetablesFruitActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RealTimeRecipeActivity"
             android:exported="false" />
         <activity
             android:name=".DailyDietActivity"

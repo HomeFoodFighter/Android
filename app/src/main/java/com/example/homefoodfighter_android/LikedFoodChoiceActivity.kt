@@ -1,5 +1,6 @@
 package com.example.homefoodfighter_android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -21,6 +22,15 @@ class LikedFoodChoiceActivity : AppCompatActivity() {
 
         initLikedFoodRecyclerView()
         initializelist()
+        btnClick()
+    }
+
+    fun btnClick(){
+        viewBinding.imgBack.setOnClickListener { startActivity(Intent(this,MainActivity::class.java)) }
+
+        //웃는 얼굴 이모티콘
+        //로그인 했을 시에 -> 마이페이지로 이동
+        //로그인 안했을 시에 -> 로그인 페이지지로 이동
     }
 
     fun initLikedFoodRecyclerView(){
