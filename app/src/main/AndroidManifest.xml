@@ -82,7 +82,7 @@
             android:exported="false" />
         <activity
             android:name=".DailyDietActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".FindAccountActivity"
             android:exported="false" />

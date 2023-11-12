@@ -2,10 +2,13 @@ package com.example.homefoodfighter_android
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View.OnLongClickListener
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.homefoodfighter_android.databinding.ActivityDailyDietBinding
+
 
 class DailyDietActivity : AppCompatActivity() {
     private lateinit var viewBinding : ActivityDailyDietBinding
@@ -34,7 +37,18 @@ class DailyDietActivity : AppCompatActivity() {
         //로그인 안했을 시에 -> 로그인 페이지지로 이동
    }
 
-    fun dialogClick(){
+    fun dialogLongClick(){
+        viewBinding.textMonBreakfast.setOnLongClickListener(OnLongClickListener {
+            true //true 설정
 
+        })
+    }
+
+    fun dialogClick(){
+        viewBinding.textMonBreakfast.setOnClickListener {
+            Toast.makeText(this,"click", Toast.LENGTH_LONG).show()
+            val dialog = DialogDailyDietEnterFragment()
+            dialog.show(supportFragmentManager, "basicDialog")
+        }
     }
 }

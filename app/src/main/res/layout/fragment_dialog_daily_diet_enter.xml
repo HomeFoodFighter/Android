@@ -8,19 +8,19 @@
     tools:context=".DialogDailyDietEnterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="170dp"
-        android:layout_height="100dp"
-        android:background="@drawable/style_dialog_enter_food">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/linear_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
             android:orientation="vertical"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/style_dialog_enter_food">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_liked_recipe"
@@ -49,6 +49,19 @@
                 android:gravity="center_horizontal" />
         </LinearLayout>
 
+        <EditText
+            android:id="@+id/edt_write_food"
+            android:layout_width="327sp"
+            android:layout_height="44sp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/style_dialog_enter_food"
+            android:hint="음식을 직접 입력해주세요."
+            android:textSize="14sp"
+            android:visibility="invisible"
+            android:clickable="false"
+            app:layout_constraintEnd_toEndOf="@+id/linear_layout"
+            app:layout_constraintStart_toStartOf="@id/linear_layout"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

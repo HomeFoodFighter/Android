@@ -2,4 +2,9 @@
     <string name="app_name">HomeFoodFighter-Android</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="meat">
+        <item msgid="beef">소고기</item>
+    </string-array>
+
 </resources>
